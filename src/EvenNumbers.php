@@ -2,33 +2,24 @@
 
 namespace Brain\Games\EvenNumbers;
 
-use function cli\line;
-use function cli\prompt;
-use function Brain\Games\Cli\getUserName;
+use function Brain\Games\GameLogic\startGame;
 
 function guessIsNumberEven()
 {
-    $username = getUserName();
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    $gameDesription = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $answersToWin = 3;
+    $questions = [];
 
-    $guessedWords = 0;
-    while ($guessedWords < 3) {
-        $number = rand(1, 20);
-
-        line("Question: %d", $number);
-        $answer = prompt('Your answer');
-
-        $trueAnswer = $number % 2 == 0 ? 'yes' : 'no';
-
-        if ($trueAnswer === $answer) {
-            line('Correct!');
-            $guessedWords++;
-        } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$trueAnswer}'.");
-            line("Let's try again, {$username}!");
-            return;
+    // generate answers and questions for game
+    for ($i = 0; $i < $answersToWin; $i++) {
+        $number = rand(1, 25);
+        while (in_array($number, array_keys($questions))) {
+            $number = rand(1, 25);
         }
+
+        $answer = $number % 2 == 0 ? 'yes' : 'no';
+        $questions[$number] = $answer;
     }
 
-    line("Congratulations, {$username}!");
+    startGame($gameDesription, $questions, $answersToWin);
 }

@@ -14,7 +14,7 @@ function startGame(string $gameDescription, array $questionsAndAnswers, int $ans
     $questions = array_keys($questionsAndAnswers);
     $rightAnswers = 0;
 
-    foreach($questions as $question) {
+    foreach ($questions as $question) {
         if ($rightAnswers === $answersForWinning) {
             break;
         }
@@ -32,7 +32,6 @@ function startGame(string $gameDescription, array $questionsAndAnswers, int $ans
             line("Let's try again, {$username}!");
             return false;
         }
-        
     }
 
     line("Congratulations, {$username}!");

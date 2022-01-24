@@ -4,14 +4,16 @@
     "description": "Brain games project",
     "license": "proprietary",
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
       ],
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/EvenNumbers.php"
         ]
     },
     "authors": [

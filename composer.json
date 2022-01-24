@@ -13,7 +13,8 @@
         },
         "files": [
             "src/Cli.php",
-            "src/EvenNumbers.php"
+            "src/EvenNumbers.php",
+            "src/GameLogic.php"
         ]
     },
     "authors": [

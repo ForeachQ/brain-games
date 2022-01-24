@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Cli\getUserName;
 
-function startGame(string $gameDescription, array $questionsAndAnswers, int $answersForWinning): bool
+function start(string $gameDescription, array $questionsAndAnswers, int $answersForWinning): bool
 {
     $username = getUserName();
     line($gameDescription);

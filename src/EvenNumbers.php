@@ -2,9 +2,9 @@
 
 namespace Brain\Games\EvenNumbers;
 
-use function Brain\Games\GameLogic\startGame;
+use function Brain\Games\GameLogic\start;
 
-function guessIsNumberEven()
+function startGame()
 {
     $gameDesription = 'Answer "yes" if the number is even, otherwise answer "no".';
     $answersToWin = 3;
@@ -21,5 +21,5 @@ function guessIsNumberEven()
         $questions[$number] = $answer;
     }
 
-    startGame($gameDesription, $questions, $answersToWin);
+    start($gameDesription, $questions, $answersToWin);
 }

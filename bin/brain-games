@@ -3,6 +3,6 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function Brain\Games\Cli\greetUser;
+use function Brain\Games\Cli\getUserName;
 
-greetUser();
+getUserName();

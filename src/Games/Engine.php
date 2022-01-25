@@ -1,21 +1,19 @@
 <?php
 
-namespace Brain\Games\Games\GameLogic;
+namespace Brain\Games\Games\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function Brain\Games\Cli\getUserName;
 
-function start(string $gameDescription, array $questionsAndAnswers, int $answersForWinning): bool
+function start(string $gameDescription, int $answersToWin, array $questionsAndAnswers): bool
 {
-    $username = getUserName();
     line($gameDescription);
 
     $questions = array_keys($questionsAndAnswers);
     $rightAnswers = 0;
 
     foreach ($questions as $question) {
-        if ($rightAnswers === $answersForWinning) {
+        if ($rightAnswers === $answersToWin) {
             break;
         }
 
@@ -29,11 +27,9 @@ function start(string $gameDescription, array $questionsAndAnswers, int $answers
             $rightAnswers++;
         } else {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$answer}'.");
-            line("Let's try again, {$username}!");
             return false;
         }
     }
 
-    line("Congratulations, {$username}!");
     return true;
 }

@@ -1,10 +1,8 @@
 <?php
 
-namespace Brain\Games\Games\EvenNumbers;
+namespace Brain\Games\Games\EvenNumbersGameData;
 
-use function Brain\Games\Games\GameLogic\start;
-
-function startGame()
+function generateData(): array
 {
     $gameDesription = 'Answer "yes" if the number is even, otherwise answer "no".';
     $answersToWin = 3;
@@ -21,5 +19,5 @@ function startGame()
         $questions[$number] = $answer;
     }
 
-    start($gameDesription, $questions, $answersToWin);
+    return [$gameDesription, $answersToWin, $questions];
 }

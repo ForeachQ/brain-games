@@ -6,7 +6,8 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
       ],
     "autoload": {
         "psr-4": {
@@ -14,8 +15,10 @@
         },
         "files": [
             "src/Cli.php",
+            "src/GCD.php",
             "src/Games/EvenNumbersGameData.php",
             "src/Games/CalculationsGameData.php",
+            "src/Games/FindGCDGameData.php",
             "src/Games/Engine.php",
             "src/Games/StartGame.php"
         ]

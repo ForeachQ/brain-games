@@ -6,6 +6,7 @@ use function Brain\Games\Cli\getUserName;
 use function Brain\Games\Games\Engine\start;
 use function Brain\Games\Games\CalculationsGameData\generateData as generateDataCalc;
 use function Brain\Games\Games\EvenNumbersGameData\generateData as generateDataEven;
+use function Brain\Games\Games\FindGCDGameData\generateData as generateDataGCD;
 use function cli\line;
 
 function startGame(string $game): bool
@@ -17,6 +18,9 @@ function startGame(string $game): bool
             break;
         case "EvenNumbers":
             $gameData = generateDataEven();
+            break;
+        case "FindGCD":
+            $gameData = generateDataGCD();
             break;
         default:
             return false;

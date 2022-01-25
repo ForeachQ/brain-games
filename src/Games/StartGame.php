@@ -8,6 +8,7 @@ use function Brain\Games\Games\CalculationsGameData\generateData as generateData
 use function Brain\Games\Games\EvenNumbersGameData\generateData as generateDataEven;
 use function Brain\Games\Games\FindGCDGameData\generateData as generateDataGCD;
 use function Brain\Games\Games\ProgressionGameData\generateData as generateDataProgression;
+use function Brain\Games\Games\PrimeGameData\generateData as generateDataPrime;
 use function cli\line;
 
 function startGame(string $game): bool
@@ -25,6 +26,9 @@ function startGame(string $game): bool
             break;
         case "Progression":
             $gameData = generateDataProgression();
+            break;
+        case "Prime":
+            $gameData = generateDataPrime();
             break;
         default:
             return false;

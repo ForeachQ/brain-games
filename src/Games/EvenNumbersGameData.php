@@ -12,7 +12,7 @@ function generateData(): array
     for ($i = 0; $i < $answersToWin; $i++) {
         do {
             $number = rand(1, 25);
-        } while (in_array($number, array_keys($questions)));
+        } while (in_array($number, array_keys($questions), true));
 
         $answer = $number % 2 == 0 ? 'yes' : 'no';
         $questions[$number] = $answer;

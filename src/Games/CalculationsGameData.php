@@ -32,7 +32,7 @@ function generateData()
                     $answer = $operandLeft + $operandRight;
                     break;
             }
-        } while (in_array($question, array_keys($questions)));
+        } while (in_array($question, array_keys($questions), true));
 
         $questions[$question] = $answer;
     }

@@ -18,7 +18,7 @@ function generateData(): array
 
             $answer = getGCD($firstNumber, $secondNumber);
             $question = "{$firstNumber} {$secondNumber}";
-        } while (in_array($question, array_keys($questions)));
+        } while (in_array($question, array_keys($questions), true));
 
         $questions[$question] = $answer;
     }

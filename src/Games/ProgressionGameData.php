@@ -28,7 +28,7 @@ function generateData(): array
             $progression[$elementToHide] = '..';
 
             $question = implode(' ', $progression);
-        } while (in_array($question, array_keys($questions)));
+        } while (in_array($question, array_keys($questions), true));
 
         $questions[$question] = $answer;
     }

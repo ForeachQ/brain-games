@@ -14,7 +14,7 @@ function generateData(): array
     for ($i = 0; $i < $answersToWin; $i++) {
         do {
             $number = rand(1, 30);
-        } while (in_array($number, array_keys($questions)));
+        } while (in_array($number, array_keys($questions), true));
 
         $answer = isPrime($number) ? 'yes' : 'no';
         $questions[$number] = $answer;

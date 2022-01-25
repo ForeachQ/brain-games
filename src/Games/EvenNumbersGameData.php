@@ -10,10 +10,9 @@ function generateData(): array
 
     // generate answers and questions for game
     for ($i = 0; $i < $answersToWin; $i++) {
-        $number = rand(1, 25);
-        while (in_array($number, array_keys($questions))) {
+        do {
             $number = rand(1, 25);
-        }
+        } while (in_array($number, array_keys($questions)));
 
         $answer = $number % 2 == 0 ? 'yes' : 'no';
         $questions[$number] = $answer;

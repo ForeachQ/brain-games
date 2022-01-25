@@ -17,10 +17,10 @@ function start(string $gameDescription, int $answersToWin, array $questionsAndAn
             break;
         }
 
-        line("Question: %d", $question);
+        line("Question: %s", $question);
         $userAnswer = prompt('Your answer');
 
-        $answer = $questionsAndAnswers[$question];
+        $answer = (string) $questionsAndAnswers[$question];
 
         if ($userAnswer === $answer) {
             line('Correct!');

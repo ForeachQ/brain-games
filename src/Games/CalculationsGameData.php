@@ -13,6 +13,7 @@ function generateData()
     for ($i = 0; $i < $answersToWin; $i++) {
         $answer = '';
         $question = '';
+
         do {
             $operation = $mathOperations[array_rand($mathOperations)];
             $operandLeft = rand(1, 25);

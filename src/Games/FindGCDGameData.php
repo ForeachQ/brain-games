@@ -12,11 +12,13 @@ function generateData(): array
 
     // generate answers and questions for game
     for ($i = 0; $i < $answersToWin; $i++) {
-        $firstNumber = rand(1, 50);
-        $secondNumber = rand(1, 50);
+        do {
+            $firstNumber = rand(1, 50);
+            $secondNumber = rand(1, 50);
 
-        $answer = getGCD($firstNumber, $secondNumber);
-        $question = "{$firstNumber} {$secondNumber}";
+            $answer = getGCD($firstNumber, $secondNumber);
+            $question = "{$firstNumber} {$secondNumber}";
+        } while (in_array($question, array_keys($questions)));
 
         $questions[$question] = $answer;
     }

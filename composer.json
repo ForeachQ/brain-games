@@ -5,7 +5,8 @@
     "license": "proprietary",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
       ],
     "autoload": {
         "psr-4": {
@@ -14,7 +15,8 @@
         "files": [
             "src/Cli.php",
             "src/EvenNumbers.php",
-            "src/GameLogic.php"
+            "src/GameLogic.php",
+            "src/Calculations.php"
         ]
     },
     "authors": [

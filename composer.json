@@ -1,43 +1,41 @@
 {
-    "name": "hexlet/code",
-    "type": "project",
-    "description": "Brain games project",
-    "license": "proprietary",
-    "bin": [
-        "bin/brain-games",
-        "bin/brain-even",
-        "bin/brain-calc",
-        "bin/brain-gcd",
-        "bin/brain-progression",
-        "bin/brain-prime"
-      ],
-    "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
-        "files": [
-            "src/Cli.php",
-            "src/GCD.php",
-            "src/Prime.php",
-            "src/Games/EvenNumbersGameData.php",
-            "src/Games/CalculationsGameData.php",
-            "src/Games/FindGCDGameData.php",
-            "src/Games/Engine.php",
-            "src/Games/StartGame.php",
-            "src/Games/ProgressionGameData.php",
-            "src/Games/PrimeGameData.php"
-        ]
+  "name": "hexlet/code",
+  "type": "project",
+  "description": "Brain games project",
+  "license": "proprietary",
+  "bin": [
+    "bin/brain-games",
+    "bin/brain-even",
+    "bin/brain-calc",
+    "bin/brain-gcd",
+    "bin/brain-progression",
+    "bin/brain-prime"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Hexlet\\Code\\": "src/"
     },
-    "authors": [
-        {
-            "name": "Ilya Golovin",
-            "email": "foreachq@gmail.com"
-        }
-    ],
-    "require": {
-        "wp-cli/php-cli-tools": "^0.11.13"
-    },
-    "require-dev": {
-        "squizlabs/php_codesniffer": "^3.6"
+    "files": [
+      "src/Cli.php",
+      "src/Games/Engine.php",
+      "src/Games/StartGame.php",
+      "src/Games/DataProviders/EvenNumbersGameDataProvider.php",
+      "src/Games/DataProviders/CalculationsGameDataProvider.php",
+      "src/Games/DataProviders/FindGCDGameDataProvider.php",
+      "src/Games/DataProviders/ProgressionGameDataProvider.php",
+      "src/Games/DataProviders/PrimeGameDataProvider.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ilya Golovin",
+      "email": "foreachq@gmail.com"
     }
+  ],
+  "require": {
+    "wp-cli/php-cli-tools": "^0.11.13"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.6"
+  }
 }

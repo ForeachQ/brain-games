@@ -1,10 +1,10 @@
 <?php
 
-namespace Brain\Games\Games\EvenNumbersGameData;
+namespace Brain\Games\Games\DataProviders\EvenNumbersGameData;
 
 function generateData(): array
 {
-    $gameDesription = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
     $answersToWin = 3;
     $questions = [];
 
@@ -14,9 +14,9 @@ function generateData(): array
             $number = rand(1, 25);
         } while (in_array($number, array_keys($questions), true));
 
-        $answer = $number % 2 == 0 ? 'yes' : 'no';
+        $answer = $number % 2 === 0 ? 'yes' : 'no';
         $questions[$number] = $answer;
     }
 
-    return [$gameDesription, $answersToWin, $questions];
+    return [$gameDescription, $answersToWin, $questions];
 }

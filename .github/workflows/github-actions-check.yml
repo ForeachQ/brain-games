@@ -1,5 +1,5 @@
 name: github-actions-check
-on: [push]
+on: [ push ]
 jobs:
   phpcs:
     runs-on: ubuntu-latest

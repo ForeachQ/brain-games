@@ -1,12 +1,12 @@
 <?php
 
-namespace Brain\Games\Games\ProgressionGameData;
+namespace Brain\Games\Games\DataProviders\ProgressionGameData;
 
-const PROGRESSION_LENGHT = 10;
+const PROGRESSION_LENGTH = 10;
 
 function generateData(): array
 {
-    $gameDesription = 'What number is missing in the progression?';
+    $gameDescription = 'What number is missing in the progression?';
     $answersToWin = 3;
     $questions = [];
 
@@ -18,7 +18,7 @@ function generateData(): array
             $step = rand(1, 6);
 
             $progression[] = $start;
-            for ($j = 1; $j < PROGRESSION_LENGHT; $j++) {
+            for ($j = 1; $j < PROGRESSION_LENGTH; $j++) {
                 $progression[] = $start + ($j * $step);
             }
 
@@ -33,5 +33,5 @@ function generateData(): array
         $questions[$question] = $answer;
     }
 
-    return [$gameDesription, $answersToWin, $questions];
+    return [$gameDescription, $answersToWin, $questions];
 }

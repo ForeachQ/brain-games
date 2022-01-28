@@ -3,17 +3,16 @@
 namespace Brain\Games\Games\StartGame;
 
 use function Brain\Games\Cli\getUserName;
+use function Brain\Games\Games\DataProviders\CalculationsGameData\generateData as generateDataCalc;
+use function Brain\Games\Games\DataProviders\EvenNumbersGameData\generateData as generateDataEven;
+use function Brain\Games\Games\DataProviders\FindGCDGameData\generateData as generateDataGCD;
+use function Brain\Games\Games\DataProviders\PrimeGameData\generateData as generateDataPrime;
+use function Brain\Games\Games\DataProviders\ProgressionGameData\generateData as generateDataProgression;
 use function Brain\Games\Games\Engine\start;
-use function Brain\Games\Games\CalculationsGameData\generateData as generateDataCalc;
-use function Brain\Games\Games\EvenNumbersGameData\generateData as generateDataEven;
-use function Brain\Games\Games\FindGCDGameData\generateData as generateDataGCD;
-use function Brain\Games\Games\ProgressionGameData\generateData as generateDataProgression;
-use function Brain\Games\Games\PrimeGameData\generateData as generateDataPrime;
 use function cli\line;
 
 function startGame(string $game): bool
 {
-    $gameData = [];
     switch ($game) {
         case "Calculations":
             $gameData = generateDataCalc();
@@ -38,9 +37,9 @@ function startGame(string $game): bool
     $gameResult = start($gameData[0], $gameData[1], $gameData[2]);
 
     if ($gameResult) {
-        line("Congratulations, {$username}!");
+        line("Congratulations, %s!", $username);
     } else {
-        line("Let's try again, {$username}!");
+        line("Let's try again, %s!", $username);
     }
 
     return $gameResult;

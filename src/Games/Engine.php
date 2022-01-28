@@ -20,13 +20,13 @@ function start(string $gameDescription, int $answersToWin, array $questionsAndAn
         line("Question: %s", $question);
         $userAnswer = prompt('Your answer');
 
-        $answer = (string) $questionsAndAnswers[$question];
+        $answer = (string)$questionsAndAnswers[$question];
 
         if ($userAnswer === $answer) {
             line('Correct!');
             $rightAnswers++;
         } else {
-            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$answer}'.");
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $answer);
             return false;
         }
     }

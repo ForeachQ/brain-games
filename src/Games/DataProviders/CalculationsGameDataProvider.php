@@ -1,10 +1,10 @@
 <?php
 
-namespace Brain\Games\Games\CalculationsGameData;
+namespace Brain\Games\Games\DataProviders\CalculationsGameData;
 
-function generateData()
+function generateData(): array
 {
-    $gameDesription = 'What is the result of the expression?';
+    $gameDescription = 'What is the result of the expression?';
     $answersToWin = 3;
     $questions = [];
 
@@ -12,14 +12,13 @@ function generateData()
 
     for ($i = 0; $i < $answersToWin; $i++) {
         $answer = '';
-        $question = '';
 
         do {
             $operation = $mathOperations[array_rand($mathOperations)];
             $operandLeft = rand(1, 25);
             $operandRight = rand(1, 25);
 
-            $question = "{$operandLeft} {$operation} {$operandRight}";
+            $question = sprintf("%s %s %s", $operandLeft, $operation, $operandRight);
 
             switch ($operation) {
                 case '*':
@@ -37,5 +36,5 @@ function generateData()
         $questions[$question] = $answer;
     }
 
-    return [$gameDesription, $answersToWin, $questions];
+    return [$gameDescription, $answersToWin, $questions];
 }

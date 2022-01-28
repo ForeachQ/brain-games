@@ -26,13 +26,13 @@ Games:
 
 ## Installation
 
-- Download this repository
+- Download package
 
 ```bash
-git clone https://github.com/ForeachQ/php-project-lvl1
+composer create-project foreachq/brain-games
 ```
 
-- Run Make Install
+- Install dependencies
 
 ```
 make install

@@ -3,6 +3,7 @@
   "type": "project",
   "description": "Brain games project",
   "license": "proprietary",
+  "minimum-stability": "stable",
   "bin": [
     "bin/brain-games",
     "bin/brain-even",

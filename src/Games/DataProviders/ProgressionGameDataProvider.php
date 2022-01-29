@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Games\DataProviders\ProgressionGameData;
+namespace Brain\Games\Games\DataProviders\ProgressionGameDataProvider;
 
 const PROGRESSION_LENGTH = 10;
 

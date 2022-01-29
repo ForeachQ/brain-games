@@ -3,11 +3,11 @@
 namespace Brain\Games\Games\StartGame;
 
 use function Brain\Games\Cli\getUserName;
-use function Brain\Games\Games\DataProviders\CalculationsGameData\generateData as generateDataCalc;
-use function Brain\Games\Games\DataProviders\EvenNumbersGameData\generateData as generateDataEven;
-use function Brain\Games\Games\DataProviders\FindGCDGameData\generateData as generateDataGCD;
-use function Brain\Games\Games\DataProviders\PrimeGameData\generateData as generateDataPrime;
-use function Brain\Games\Games\DataProviders\ProgressionGameData\generateData as generateDataProgression;
+use function Brain\Games\Games\DataProviders\CalculationsGameDataProvider\generateData as generateDataCalc;
+use function Brain\Games\Games\DataProviders\EvenNumbersGameDataProvider\generateData as generateDataEven;
+use function Brain\Games\Games\DataProviders\FindGCDGameDataProvider\generateData as generateDataGCD;
+use function Brain\Games\Games\DataProviders\PrimeGameDataProvider\generateData as generateDataPrime;
+use function Brain\Games\Games\DataProviders\ProgressionGameDataProvider\generateData as generateDataProgression;
 use function Brain\Games\Games\Engine\start;
 use function cli\line;
 

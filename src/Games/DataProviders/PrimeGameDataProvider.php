@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Games\DataProviders\PrimeGameData;
+namespace Brain\Games\Games\DataProviders\PrimeGameDataProvider;
 
 function generateData(): array
 {

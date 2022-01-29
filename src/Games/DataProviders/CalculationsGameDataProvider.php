@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Games\DataProviders\CalculationsGameData;
+namespace Brain\Games\Games\DataProviders\CalculationsGameDataProvider;
 
 function generateData(): array
 {

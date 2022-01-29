@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Games\DataProviders\FindGCDGameData;
+namespace Brain\Games\Games\DataProviders\FindGCDGameDataProvider;
 
 function generateData(): array
 {

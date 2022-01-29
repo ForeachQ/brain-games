@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Games\DataProviders\EvenNumbersGameData;
+namespace Brain\Games\Games\DataProviders\EvenNumbersGameDataProvider;
 
 function generateData(): array
 {

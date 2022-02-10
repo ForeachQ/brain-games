@@ -1,5 +1,5 @@
-[![example workflow](https://github.com/ForeachQ/php-project-lvl1/actions/workflows/github-actions-check.yml/badge.svg)](https://github.com/ForeachQ/php-project-lvl1/actions/workflows/github-actions-check.yml)
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+[![PHP CI](https://github.com/ForeachQ/brain-games/actions/workflows/php-ci.yml/badge.svg)](https://github.com/ForeachQ/brain-games/actions/workflows/php-ci.yml)
+<a href="https://codeclimate.com/github/ForeachQ/brain-games/maintainability"><img src="https://api.codeclimate.com/v1/badges/e01ecaae2a0e999d254f/maintainability"/></a>
 
 
 # Brain Games

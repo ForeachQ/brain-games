@@ -1,4 +1,4 @@
-name: github-actions-check
+name: PHP CI
 on: [ push ]
 jobs:
   phpcs:
